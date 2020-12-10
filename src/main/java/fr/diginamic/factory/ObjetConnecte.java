@@ -37,6 +37,23 @@ public abstract class ObjetConnecte {
 		return true;
 	}
 
+
+	/**
+	 * @return the limiteVolts
+	 */
+	public int getLimiteVolts() {
+		return limiteVolts;
+	}
+
+
+	/**
+	 * @param limiteVolts the limiteVolts to set
+	 */
+	public void setLimiteVolts(int limiteVolts) {
+		this.limiteVolts = limiteVolts;
+	}
+	
+
 	
 
 }

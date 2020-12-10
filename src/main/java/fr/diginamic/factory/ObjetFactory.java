@@ -1,10 +1,10 @@
 package fr.diginamic.factory;
 
-import java.io.IOException;
 
-public class ObjetFactory {
+public class ObjetFactory implements IObjetFactory {
 
-	public static ObjetConnecte getObjet(TypeObjet type, int limiteVolts) {
+	@Override
+	public ObjetConnecte getObjet(TypeObjet type, int limiteVolts) {
 		if (type == TypeObjet.TELEPHONE) {
 			return new TelephonePortable(limiteVolts);
 		} else if (type == TypeObjet.TABLETTE) {

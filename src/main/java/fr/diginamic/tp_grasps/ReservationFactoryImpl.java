@@ -6,6 +6,7 @@ import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 
+
 public class ReservationFactoryImpl implements ReservationFactory {
 	
 	private CalculComptableServiceImpl calculComptableService = new CalculComptableServiceImpl();

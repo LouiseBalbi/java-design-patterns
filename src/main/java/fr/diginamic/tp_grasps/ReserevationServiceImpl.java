@@ -4,12 +4,13 @@ import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
+import fr.diginamic.tp_grasps.daos.IClientDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
 
 public class ReserevationServiceImpl implements ReservationService {
 
 	/** DAO permettant d'accéder à la table des clients */
-	private ClientDao clientDao = new ClientDao();
+	private IClientDao clientDao = new ClientDao();
 
 	/** DAO permettant d'accéder à la table des types de réservation */
 	private TypeReservationDao typeReservationDao = new TypeReservationDao();

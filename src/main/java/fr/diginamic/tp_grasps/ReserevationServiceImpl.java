@@ -5,6 +5,7 @@ import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
 import fr.diginamic.tp_grasps.daos.IClientDao;
+import fr.diginamic.tp_grasps.daos.ITypeReservationDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
 
 public class ReserevationServiceImpl implements ReservationService {
@@ -13,7 +14,7 @@ public class ReserevationServiceImpl implements ReservationService {
 	private IClientDao clientDao = new ClientDao();
 
 	/** DAO permettant d'accéder à la table des types de réservation */
-	private TypeReservationDao typeReservationDao = new TypeReservationDao();
+	private ITypeReservationDao typeReservationDao = new TypeReservationDao();
 
 	private ReservationFactory reservationFactory = new ReservationFactoryImpl();
 	
@@ -33,7 +34,7 @@ public class ReserevationServiceImpl implements ReservationService {
 		Reservation reservation = reservationFactory.getInstance(client, type, dateReservation, nbPlaces);
 
 		// 6) Ajout de la réservation au client
-		client.getReservations().add(reservation);
+		client.addReservation(reservation);
 
 		return reservation;
 
